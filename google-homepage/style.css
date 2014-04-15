@@ -1,0 +1,167 @@
+/* top-right panel */
+.upper  {
+	position: fixed;
+	width: 100%;
+	top: 10px;
+}
+.round  {
+	border-radius: 50%;
+}
+#a1  {
+	float: right;
+	margin-right: 23px; 
+}
+.black  {
+	width: 25px;
+	height: 22px;
+	background-color: #000;
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: 900;
+	padding-top: 3px
+}
+#a2  {
+	float: right;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+#a3  {
+	float: right;
+	margin-right: 18px;
+	margin-top: 6px;	
+}
+#a4  {
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+#a1:hover, #a2:hover, #a3:hover, #a4:hover  {
+	position: relative;
+	top: 1px;
+}
+#a5, #a6, #a7 {
+	float: right;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: 700;
+	margin-right: 21px;
+	margin-top: 8px;
+}
+#a5:hover, #a6:hover, #a7:hover  {
+	text-decoration: underline;
+}
+/* main center part */
+
+
+/* Google Black */
+.main  {
+	height: 87px;
+	width: 242px;
+	margin: 200px auto 20px;
+}
+.pais  {
+	position: relative;
+	bottom: 29px;
+	left: 189px;
+	font-size: 20px;
+	font-weight: 900;
+	font-family: Verdana;
+}
+
+
+/* Search panel */
+.form  {
+	height: 27px;
+	width: 550px;
+	margin: 0px auto;
+	border: 2px solid black;
+	padding: 1px 5px;
+}
+.search  {	
+	border: 0px;
+	padding-left: 4px;
+	padding-top: 2px;
+	width: 484px;
+	outline: 0;
+	font-size: 16px;
+	font-weight: 900;
+}
+.in  {
+	display: inline-block;
+}
+
+#d  {
+	float: right;
+	padding: 3px 4px 0px;
+}
+#c  {
+	float: right;
+	padding: 8px 5px 0px;
+}
+
+
+/* Buttons */
+.button  {
+	width: 100px;
+	height: 28px;
+	color: #FFF;
+	background-color: #000;
+	font-size: 14px;
+	font-family: Arial;
+	text-align: center;
+	padding-top: 3px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0px 7px;
+}
+.button:hover  {
+	border-bottom: 3px solid #AAA;
+}
+.underform  {
+	width: 550px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+
+
+/* Footer */
+.footer  {
+	position: fixed;
+	bottom: 0px;
+	height: 38px;
+	width: 100%;
+	background-color: #EFEFEF;
+	border-top: 2px solid #000;
+}
+.lefty  {
+	width: 300px;
+	position: relative;
+	margin-top: 12px;
+	float: left;
+	margin-left: 20px;
+}
+.righty  {
+	width: 300px;
+	position: relative;
+	margin-top: 12px;
+	float: right;
+	margin-right: 20px;
+}
+.footer a  {
+	padding: 10px 15px;
+	font-size: 14px;
+	font-family: Arial;
+	text-decoration: none;
+}
+
+
+
+/* Links */
+a:link, a:visited  {
+	color: #000;
+}
+.footer a:hover  {
+	text-decoration: underline;
+}
