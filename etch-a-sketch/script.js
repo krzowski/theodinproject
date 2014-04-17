@@ -6,8 +6,10 @@ $(document).ready(function(){
 	$(".grid").on("mouseenter", function(){
 		$(this).css("background", "#FFFFFF");
 	});
+
 	$(".clear").on("click", function(){
-		$(".grid").css("background", "#333355");
+		$(".grid").css({"background": "#333355", "opacity": 1}).removeClass("colored");
+
 	});
 
 	$(".new").on("click", function(){
