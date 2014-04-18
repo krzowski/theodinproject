@@ -1,4 +1,5 @@
 var number = 16;
+var cancel = false;
 
 $(document).ready(function(){
 	grids(number)
@@ -12,57 +13,68 @@ $(document).ready(function(){
 
 	});
 
+
 	$(".new").on("click", function(){
 		newGrid();
-		$(".grid").on("mouseenter", function(){
-			$(this).css("background", "#FFFFFF");
-		});
+		if (cancel == false){
+			$(".grid").on("mouseenter", function(){
+				$(this).css("background", "#FFFFFF");
+			});
+		}
 	});
 
 	$(".random").on("click", function(){
 		newGrid();
-		$(".grid").on("mouseenter", function(){
-			$(this).css("background", randomColor());
-		});
+		if (cancel == false){
+			$(".grid").on("mouseenter", function(){
+				$(this).css("background", randomColor());
+			});
+		}
 	});
 
 	$(".opacity").on("click", function(){
 		newGrid();
-		$(".grid").on("mouseenter", function(){
-			var opacity = $(this).css("opacity");
-			if (opacity > 0.1) {
-				$(this).css("opacity", opacity - 0.1);
-			}else{
-				$(this).css("opacity", 0);
-			}
-		});
-	});
-	
-	$(".ranopa").on("click", function(){
-		newGrid();
-		$(".grid").on("mouseenter", function(){
-			var opacity = $(this).css("opacity");
-
-			if ($(this).hasClass("colored")){
+		if (cancel == false){
+			$(".grid").on("mouseenter", function(){
+				var opacity = $(this).css("opacity");
 				if (opacity > 0.1) {
 					$(this).css("opacity", opacity - 0.1);
 				}else{
 					$(this).css("opacity", 0);
 				}
-			}else {
-				$(this).css("background", randomColor());
-				$(this).addClass("colored");
-			}	
-		});
+			});
+		}
+	});
+	
+	$(".ranopa").on("click", function(){
+		newGrid();
+		if (cancel == false){
+			$(".grid").on("mouseenter", function(){
+				var opacity = $(this).css("opacity");
+
+				if ($(this).hasClass("colored")){
+					if (opacity > 0.1) {
+						$(this).css("opacity", opacity - 0.1);
+					}else{
+						$(this).css("opacity", 0);
+					}
+				}else {
+					$(this).css("background", randomColor());
+					$(this).addClass("colored");
+				}	
+			});
+		}
 	});
 
 	$(".trail").on("click", function(){
 		newGrid();
-		$(".grid").hover(function(){
-			$(this).css({"opacity": 0});
-		}, function(){
-			$(this).fadeTo("slow", 1);
-		});
+			if (cancel == false){
+			$(".grid").hover(function(){
+				$(this).css({"opacity": 0});
+			}, function(){
+				$(this).fadeTo("slow", 1);
+			});
+		}
 	});
 	
 });
@@ -90,10 +102,13 @@ function randomColor(){
 function newGrid(){
 	number = prompt("How many grids? (between 1 and 64)");
 	if (number > 0 && number < 65) {
+		cancel = false;
 		grids(number);
 		$(".grid").css("background", "#333355");
 		$(".grid").unbind();
-	}else {
+	} else if (number == null) {
+		cancel = true;
+	} else {
 		newGrid();
 	}
 }
