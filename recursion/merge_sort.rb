@@ -11,8 +11,8 @@ def merge_sort(array)
         sorted_array << arr2.shift
       end
     else
-      sorted_array << arr1.shift unless arr1.empty?
-      sorted_array << arr2.shift unless arr2.empty?
+      sorted_array << arr1.shift(arr1.length) unless arr1.empty?
+      sorted_array << arr2.shift(arr2.length) unless arr2.empty?
     end
   end
   sorted_array
