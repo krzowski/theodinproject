@@ -1,7 +1,7 @@
 # The Odin Project Assignments
 
 [The Odin Project](http://www.theodinproject.com/home) is a website that provides a proven path to learn web development. It puts emphasis on practice over theory, but not neglects the second. 
-The Odin Project was created by [Erik Trautman](http://www.eriktrautman.com/), who's a graduate from [App Academy](http://www.appacademy.io/).
+The Odin Project was created by [Erik Trautman](http://www.eriktrautman.com/), who's a graduate of [App Academy](http://www.appacademy.io/).
 
 
 
