@@ -1,4 +1,4 @@
-# OOP  -  Tic Tac Toe Game
+## OOP  -  Tic Tac Toe Game
 
 http://www.theodinproject.com/ruby-programming/oop
 

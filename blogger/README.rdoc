@@ -1,4 +1,4 @@
-# Rails blogger
+## Rails blogger
 
 from [JumpstartLab tutorial].(http://tutorials.jumpstartlab.com/projects/blogger.html)
 

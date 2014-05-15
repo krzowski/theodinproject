@@ -1,4 +1,4 @@
-# Basic web server
+## Basic web server
 
 http://www.theodinproject.com/ruby-programming/ruby-on-the-web
 

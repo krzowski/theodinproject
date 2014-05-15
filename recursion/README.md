@@ -1,4 +1,4 @@
-# Project: Recursion 
+## Project: Recursion 
 
 http://www.theodinproject.com/ruby-programming/recursion
 
