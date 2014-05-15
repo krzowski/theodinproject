@@ -9,37 +9,37 @@ Path (numbered in the chronological order) :
 
 ## Web development
 
-### 1. Google-homepage 
+#### 1. Google-homepage 
 The first assingment on positioning.
 
-### 2. Etch-a-sketch 
+#### 2. Etch-a-sketch 
 A virtual etch-a-sketch that was built using javascript and jquery.
 
 ## Ruby
 	
-### 3. Learn ruby project
+#### 3. Learn ruby project
 First ruby scripts written to pass RSpec tests.
 
-### 5. Ruby blocks
+#### 5. Ruby blocks
 A few simple ruby scripts.
 
-### 6. Advanced ruby blocks
+#### 6. Advanced ruby blocks
 Bubble sort and my implementation of the enumerable module.
 
-### 7. OOP with ruby
+#### 7. OOP with ruby
 OOP project - TicTacToe game.
 
-### 8. Hangman with file I/O
+#### 8. Hangman with file I/O
 Hangman that uses an external dictionary and allows to save and load the game.
 
-### 9. Web server
+#### 9. Web server
 A basic web server used to familiarize with the browser-server communication.
 
-### 10. Recursion
+#### 10. Recursion
 Merge sort and fibonacci numbers.
 
 
 ## Rails
 
-### 4. Blogger
+#### 4. Blogger
 A blogger app used to familiarize with rails.

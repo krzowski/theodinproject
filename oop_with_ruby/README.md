@@ -7,8 +7,8 @@ Tic tac toe game with player objects that store the record.
 
 Example:
 
-mark = Player.new("Mark")
-suzy = Player.new("Suzy")
-game1 = TicTacToe.new(mark, suzy)
-----
-mark.record
+	mark = Player.new("Mark")  
+	suzy = Player.new("Suzy")  
+	game1 = TicTacToe.new(mark, suzy)
+
+	mark.record
