@@ -15,6 +15,9 @@ The first assingment on positioning.
 #### 2. Etch-a-sketch 
 A virtual etch-a-sketch that was built using javascript and jquery.
 
+#### 11. HTML Forms
+A copy of mint.com registration page.
+
 ## Ruby
 	
 #### 3. Learn ruby project
