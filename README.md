@@ -46,3 +46,6 @@ Merge sort and fibonacci numbers.
 
 #### 4. Blogger
 A blogger app used to familiarize with rails.
+
+#### 12. Members Only
+Plain app which use authentication to restrict access.
