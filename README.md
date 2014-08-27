@@ -49,3 +49,6 @@ A blogger app used to familiarize with rails.
 
 #### 12. Members Only
 Plain app which use authentication to restrict access.
+
+#### 13. Private Events
+Another plain app for playing with active record associations.
