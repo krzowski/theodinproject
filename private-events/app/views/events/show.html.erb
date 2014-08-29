@@ -1,0 +1,6 @@
+<%= render partial: @event %>
+<p>List of Attendees:</p>
+
+<ol><% @event.attendees.each do |attendee| %>
+  <li><%= link_to attendee.name, user_path(attendee) %></li>
+<% end %></ol>

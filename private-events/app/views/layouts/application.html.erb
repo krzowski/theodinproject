@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PrivateEvents</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% if !session[:signed].nil? %>
+    <h4>You're <%= User.find(session[:signed]).name %></h4>
+  <% end %>
+  <br />
+  <%= link_to "Homepage", root_path %>
+  <% if session[:signed].nil? %>
+    <%= link_to "Sign up", signup_path %> 
+    <%= link_to "Sign in", signin_path %> 
+  <% else %>
+  	<%= link_to "Sign out", signout_path, method: "delete" %>
+    <%= link_to "Create Event", new_event_path %>   
+    <%= link_to "User", user_path(session[:signed]) %>   
+  <% end %>
+
+  <br />
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value) %>
+  <% end %>
+  <br />
+<%= yield %>
+
+</body>
+</html>

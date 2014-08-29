@@ -1,0 +1,6 @@
+<p><%= link_to event.title, event_path(event) %>, 
+    <%= event.description %>, 
+	at <%= event.date.strftime("%H:%M %d %b %Y") %>, 
+	created by <%= link_to event.creator.name, 
+	user_path(event.creator) %>. 
+	<%= link_to "Attend this event", attend_event_path(event.id) %></p>

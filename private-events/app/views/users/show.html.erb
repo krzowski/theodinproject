@@ -1,0 +1,8 @@
+<h4>It's <%= User.find(params[:id]).name %></h4>
+
+<br /><br />
+<p>User's Upcoming Events:
+<%= render partial: 'events/event', collection: @upcoming_events %></p>
+
+<p>User's Past Events:
+<%= render partial: 'events/event', collection: @past_events %></p>
