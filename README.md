@@ -48,7 +48,10 @@ Merge sort and fibonacci numbers.
 A blogger app used to familiarize with rails.
 
 #### 12. Members Only
-Plain app which use authentication to restrict access.
+Plain app which uses authentication to restrict access.
 
 #### 13. Private Events
 Another plain app for playing with active record associations.
+
+#### 14. Flight Booker
+App for booking app that uses somewhat more advanced forms.
