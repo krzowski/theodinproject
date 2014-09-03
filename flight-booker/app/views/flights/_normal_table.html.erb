@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= link_to "Departure airport",
+              flights_path(sort: :departure_airport_id) %></th>
+      <th><%= link_to "Arrival airport",
+              flights_path(sort: :arrival_airport_id) %></th>
+      <th><%= link_to "Date", flights_path(sort: :date) %></th>
+      <th>Duration</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.departure_airport.name %></td>
+        <td><%= flight.arrival_airport.name %></td>
+        <td><%= flight.date %></td>
+        <td><%= flight.duration %></td>
+        <td><%= link_to 'Show', flight %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

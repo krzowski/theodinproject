@@ -5,14 +5,26 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @airports = Airport.all.map { |a| [a.name, a.id] }
+    @passengers = (1..4).to_a    
 
-    if params[:sort] || session[:sort] 
-      session[:sort] = params[:sort] if params[:sort]
-      @flights = Flight.all.order(session[:sort], :date)
+    if params[:search]
+      @number_of_passengers = params[:search][:passengers]
+      date = "#{params[:search][:date]['date(3i)']}/"\
+             "#{params[:search][:date]['date(2i)']}/"\
+             "#{params[:search][:date]['date(1i)']}"
+      @flights = Flight.get_flights(params[:search][:from],
+                 params[:search][:to], DateTime.parse(date))
+      @active_form = true
     else
-      @flights = Flight.all.order(:date)
-      session[:sort] = nil
-    end
+      if params[:sort] || session[:sort] 
+        session[:sort] = params[:sort] if params[:sort]
+        @flights = Flight.all.order(session[:sort], :date)
+      else
+        @flights = Flight.all.order(:date)
+        session[:sort] = nil
+      end
+      @active_form = false
+    end 
   end
 
   # GET /flights/1

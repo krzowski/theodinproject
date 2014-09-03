@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Info:</strong>
+  <%= "Flight from #{@booking.flight.departure_airport.name} to #{@booking.flight.arrival_airport.name}." %><br />
+  <%= "#{@booking.flight.date}" %>
+</p>
+
+<p>
+  <strong>Passengers:</strong>
+  <ul><% @passengers.each do |passenger| %>
+  <li><%= passenger.name %></li>
+  <% end %>
+</p>
+
+<%= link_to 'Back', bookings_path %>
