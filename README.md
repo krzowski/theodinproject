@@ -55,3 +55,6 @@ Another plain app for playing with active record associations.
 
 #### 14. Flight Booker
 App for booking app that uses somewhat more advanced forms.
+
+#### 15. Odin Kittens
+App with a simple api
