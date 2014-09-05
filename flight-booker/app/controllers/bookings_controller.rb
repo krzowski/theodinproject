@@ -10,21 +10,16 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @number_of_passengers = Integer(params[:number_of_passengers])
     @flight = Flight.find(params[:pick])
     @booking = @flight.bookings.build
-    @number_of_passengers.times do
-      @passenger = @booking.passengers.build
-    end
+    Integer(params[:number_of_passengers]).times { @booking.passengers.build }
   end
 
   def create
-    @number_of_passengers = Integer(params[:number_of_passengers])
-    @booking = Flight.find(params[:flight_id]).bookings.build(booking_params)
+    @flight = Flight.find(params[:flight_id])
+    @booking = @flight.bookings.new(booking_params)
     if @booking.save
-      @number_of_passengers.times do |n|
-        @passenger = @booking.passengers.build(booking_params[:passengers_attributes][n])
-      end
+      @booking.passengers.each { |p| PassengerMailer.thank_you_email(p).deliver }
       redirect_to @booking, notice: 'Booking was successfully created.'
     else
       render action: 'new'

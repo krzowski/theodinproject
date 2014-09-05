@@ -1,16 +1,13 @@
 <%= form_for(@booking) do |f| %>
   <%= f.label :airport, "Flight from #{@flight.departure_airport.name} to #{@flight.arrival_airport.name}." %><br>
   <%= f.label :date, "#{@flight.date}" %><br>
-  <% @number_of_passengers.times do |n| %>
-    <%= f.fields_for :passengers, @passenger do |pas| %>
-      <p>Passenger <%= "#{n+1}" %>
-      <p><%= pas.label :name %>
-         <%= pas.text_field :name %></p>
-      <p><%= pas.label :email %>
-         <%= pas.text_field :email %></p>
-    <% end %>
+  <%= f.fields_for :passengers, @passenger do |pas| %>
+    <p>Passenger
+    <p><%= pas.label :name %>
+       <%= pas.text_field :name %></p>
+    <p><%= pas.label :email %>
+       <%= pas.text_field :email %></p>
   <% end %>
-  <%= hidden_field_tag 'number_of_passengers', @number_of_passengers %>
   <%= hidden_field_tag 'flight_id', @flight.id %>
   <p><%= f.submit %></p>
 <% end %>
